@@ -1,0 +1,35 @@
+
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="jumbotron text-center">
+  <div class="container">
+    <h1>How to use MKSDrive App</h1>
+  </div>
+</div>
+<div class="container">
+  <div class="alert alert-info text-center" role="alert">
+    Enter username(Email id) and password and then click on "Proceed" button to login.<br>
+    Optionally check the "Remember Me" box to store your credentials for next login.
+  </div>
+  <div class="alert alert-info text-center" role="alert" style="margin-top: 25px;">
+    At login for first time, the app will prompt to change your password. An otp will be sent 
+    to your registered email. Use this otp while changing the password.
+  </div>
+  <div class="alert alert-info text-center" role="alert" style="margin-top: 25px;">
+    If you have forgot password, click on "Forgot Password" button and then follow the steps as above.
+  </div>
+  <div class="alert alert-info text-center" role="alert" style="margin-top: 25px;">
+    Once logged in, you can view your profile by clicking "My Profile" icon on navigation view.<br>
+    Also you can change your password from the menu at top right icon.\n\n\n
+  </div>
+  <div class="alert alert-info text-center" role="alert" style="margin-top: 25px;">
+    To view the files, click on "Goto Drive" button on the home screen.<br>
+    Folders are represented with pastel yellow color background.<br>
+    You can download a file by clicking on it. Also by long pressing you can request the file by email.<br>
+    Folder request feature is currently not available.
+  </div>
+</div>
+
+{% endblock %}
