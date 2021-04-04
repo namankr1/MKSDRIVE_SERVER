@@ -1,5 +1,7 @@
 *.pyc
 .env
+.idea
+venv
 db.sqlite3
 mksdrive/client_secret_drive.json
 mksdrive/client_secret_gmail.json

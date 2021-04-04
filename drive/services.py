@@ -92,7 +92,7 @@ def get_credentials_gmail():
         CLIENT_SECRET_FILE_GMAIL1 = os.path.join(settings.PROJECT_ROOT,CLIENT_SECRET_FILE_GMAIL)
         flow = client.flow_from_clientsecrets(CLIENT_SECRET_FILE_GMAIL1, SCOPES_GMAIL)
         flow.user_agent = APPLICATION_NAME
-        credentials = tools.run_flow(flow, store)
+        credentials = tools.run_flow(flow, store, flags=tools.argparser.parse_args(args=['--noauth_local_webserver']))
         print('Storing credentials to ' + credential_path)
     return credentials
 
@@ -228,7 +228,7 @@ def get_credentials_drive():
         CLIENT_SECRET_FILE_DRIVE1 = os.path.join(settings.PROJECT_ROOT,CLIENT_SECRET_FILE_DRIVE)
         flow = client.flow_from_clientsecrets(CLIENT_SECRET_FILE_DRIVE1, SCOPES_DRIVE)
         flow.user_agent = APPLICATION_NAME
-        credentials = tools.run(flow, store)
+        credentials = tools.run_flow(flow, store, flags=tools.argparser.parse_args(args=['--noauth_local_webserver']))
         print('Storing credentials to ' + credential_path)
     return credentials
 
